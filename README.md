@@ -186,30 +186,13 @@ python main_ks.py --mode scan                                                # o
 python main_ks.py --mode pipeline --loss topology --smoke --outdir runs_smoke  # tiny settings, checks the code
 ```
 
-**Ablations** (Appendix C.3.5 and C.4.4):
+**Ablations**:
 
 | Ablation | Command |
 |---|---|
 | No training burn-in for the task-only baselines | add `--burn_in 0 --outdir runs_ks_noburnin` to the pipeline command |
 | Recurrence with a misspecified period 0.6 P* (no search, 1500 epochs, final weights) | `python main_ks.py --mode pipeline --loss recurrence --epochs 1500 --P_scale 0.6 --outdir runs_ks_period06` |
 | Same, correct period | `python main_ks.py --mode pipeline --loss recurrence --epochs 1500 --outdir runs_ks_period10` |
-
-## Compute
-
-One KS training epoch takes about 2 s on 2 CPU cores, and the full KS search takes about a day per objective.
-Persistent homology on 96 points (`max_dim = 2`, at most about 1.4 × 10⁵ triangles) adds a fraction of a second per
-epoch.
-
-## Citation
-
-```bibtex
-@article{changani2027shape,
-  title   = {Shape the Attractor: Topological Regularization for Reliable Closed-Loop Synthesis},
-  author  = {Changani, Soham and Neupane, Yubaraj and Coskunuzer, Baris and Gumussoy, Suat},
-  journal = {Proceedings of Machine Learning Research},
-  year    = {2027}
-}
-```
 
 ## Acknowledgments
 
