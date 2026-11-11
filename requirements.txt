@@ -1,0 +1,4 @@
+torch>=2.0
+numpy
+matplotlib
+oineus==0.9.38
