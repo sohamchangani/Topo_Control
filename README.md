@@ -1,8 +1,6 @@
 # Shape the Attractor: Topological Regularization for Reliable Closed-Loop Synthesis
 
 Code for the paper **"Shape the Attractor: Topological Regularization for Reliable Closed-Loop Synthesis"**
-by Soham Changani\*, Yubaraj Neupane\*, Baris Coskunuzer† and Suat Gumussoy† (UT Dallas).
-\* Equal contribution. † Co-senior authors.
 
 We learn neural feedback controllers that bring trajectories from many initial conditions onto **one common
 periodic orbit**, without prescribing that orbit. The closed loop is simulated from many initial conditions, the
